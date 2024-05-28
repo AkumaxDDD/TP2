@@ -2,4 +2,6 @@ Este es un archivo creado para  el tp2 de Laboratorio computacional 3
 
 En esta carpeta haremos fusiones con conflictos.
 
-agregando algo para que el primer conflicto surja.
+agregando primer conflicto en la rama conflicto1
+
+aceptamos los cambios y dejamos los de  la rama conflicto1
