@@ -15,4 +15,4 @@ conflicto1 y luego el resutado entrara en comflicto con la rama master.
 
 aceptando ambos cambios:
 
-agrego un conflicto en la conflicto2 master pero este tambien se quedara
+agrego un conflicto en conflicto2 pero este tambien se quedara
