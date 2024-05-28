@@ -1,1 +1,3 @@
 cree un archivo nuevo llamado archivo2
+
+agrego un cambio en sinconflicto2
