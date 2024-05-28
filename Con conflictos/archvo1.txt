@@ -8,3 +8,7 @@ aceptamos los cambios y dejamos los de  la rama conflicto1
 
 agrego un segundo conflicto desde la rama conflicto2, este entra en conflicto con el archivo en la rama
 conflicto1 y luego el resutado entrara en comflicto con la rama master.
+
+rechazando cambios:
+
+agrego conflicto en rama conflicto2 pero no aceptare los cambios
