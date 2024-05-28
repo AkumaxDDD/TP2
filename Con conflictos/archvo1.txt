@@ -1,0 +1,3 @@
+Este es un archivo creado para  el tp2 de Laboratorio computacional 3 
+
+En esta carpeta haremos fusiones con conflictos.
