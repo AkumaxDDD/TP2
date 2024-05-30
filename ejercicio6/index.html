@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body id="body">
+    <div class="comenzemos" id="comenzemos" >Comenzemos</div>
+    <p id="p"></p>
+
+    <script>
+        const comenzemos = document.getElementById("comenzemos")
+        const body = document.getElementById("body")
+            const formulario = creador("form")
+            const lNombre = creador ("label");
+            const iNombre = creador("input");
+            const lApellido = creador("label");
+            const iApellido = creador("input");
+            const lEdad = creador("label");
+            const iEdad = creador("input");
+            const lEstatura = creador("label");
+            const iEstatura= creador("input");
+            const lEmail = creador("label");
+            const iEmail= creador("input");
+            const mensaje = creador("label");
+            const boton = creador("button")
+        comenzemos.onclick = ()=>{
+            console.log("en la funcion")
+            formulario.style.width="100%"
+            formulario.style.display="flex"
+            formulario.style.flexDirection="column"
+            formulario.style.justifyContent="center"
+            formulario.style.alignItems="center"
+            formulario.style.backgroundColor="aqua"
+            lNombre.textContent="Nombre/s"
+            lNombre.style.paddingTop="10px"
+            iNombre.required= "true"
+            body.appendChild(formulario)
+            formulario.appendChild(lNombre)
+            lNombre.appendChild(iNombre)
+            formulario.addEventListener("focusout", () =>{
+                if(iNombre.value.length < 5  && iNombre.value.length > 0){
+                    iNombre.style.backgroundColor="green"
+                    lApellido.textContent="Apellido/s"
+                    lApellido.style.paddingTop="10px"
+                    body.appendChild(formulario)
+                    mensaje.textContent="todo correcto"
+                    mensaje.style.color="green"
+                    formulario.appendChild(mensaje)
+                    formulario.appendChild(lApellido)
+                    lApellido.appendChild(iApellido)
+                    if(iApellido.value.length < 5  && iApellido.value.length > 0){
+                            iApellido.style.backgroundColor="green";
+                            lEdad.textContent="Edad(años)";
+                            iEdad.type="number"
+                            lEdad.style.paddingTop="10px"
+                            mensaje.textContent="todo correcto"
+                            mensaje.style.color="green"
+                            formulario.appendChild(mensaje)
+                            formulario.appendChild(lEdad)
+                            lEdad.appendChild(iEdad)
+                            if(iEdad.value > 0  && iEdad.value > 18){
+                                iEdad.style.backgroundColor="green"
+                                mensaje.textContent="todo correcto"
+                                mensaje.style.color="green"
+                                formulario.appendChild(mensaje)
+                                lEstatura.textContent="Estatura(cm)"
+                                lEstatura.style.paddingTop="10px"
+                                formulario.appendChild(lEstatura)
+                                lEstatura.appendChild(iEstatura)
+                                if(parseFloat(iEstatura.value) > 0 && parseFloat(iEstatura.value) < 230){
+                                    iEstatura.style.backgroundColor="green"
+                                    mensaje.textContent="todo correcto"
+                                    mensaje.style.color="green"
+                                    formulario.appendChild(mensaje)
+                                    lEmail.textContent="Email"
+                                    lEmail.style.paddingTop="10px"
+                                    formulario.appendChild(lEmail)
+                                    lEmail.appendChild(iEmail)
+                                    if(iEmail.value.includes("@")){
+                                        iEmail.style.backgroundColor="green"
+                                        mensaje.textContent="todo correcto"
+                                        mensaje.style.color="green"
+                                        formulario.appendChild(mensaje)
+                                        boton.textContent="Enviar"
+                                        formulario.appendChild(boton)
+                                    }else{
+                                        iEmail.style.backgroundColor="red"
+                                        mensaje.textContent="Email invalido"
+                                        mensaje.style.color="red"
+                                        formulario.appendChild(mensaje)
+                                    }
+                                }else{
+                                    iEstatura.style.backgroundColor="red"
+                                    mensaje.textContent="altura negativa o mayor a 230 cm"
+                                    mensaje.style.color="red"
+                                    formulario.appendChild(mensaje)
+                                }
+                            }else{
+                                iEdad.style.backgroundColor="red"
+                                mensaje.textContent="edad negativa o eres menor de 18"
+                                mensaje.style.color="red"
+                                formulario.appendChild(mensaje)
+                            }
+                    }else{
+                        iApellido.style.backgroundColor="red";
+                        mensaje.textContent="apellido vacio o con mas de 50 caracteres"
+                        mensaje.style.color="red"
+                        formulario.appendChild(mensaje)
+                    }
+                }else{
+                    iNombre.style.backgroundColor="red"
+                    mensaje.textContent="nombre vacio o con mas de 50 caracteres"
+                    mensaje.style.color="red"
+                    body.appendChild(formulario)
+                    formulario.appendChild(mensaje)
+                    lNombre.remove
+                };
+                
+            })
+        }
+        boton.onclick = () => {
+            alert("datos enviados")
+            const nombre = iNombre.value
+            const apellido = iApellido.value
+            const edad = iEdad.value
+            const estatura = iEstatura.value
+            const email = iEmail.value
+            p.textContent=`nombre : ${nombre}`
+        };
+
+        function creador(elemento){
+            return document.createElement(elemento)
+        }
+    </script>
+</body>
+</html>

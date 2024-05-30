@@ -1,0 +1,24 @@
+
+h1{
+    margin-top: 0;
+    display: flex;
+    width: 100%;
+    background-color: aqua;
+    justify-content: center;
+    align-items: center;
+    padding-bottom:10px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    border: solid 3px rgb(85, 156, 218) ;
+    width: 100%;
+    background-color: aqua;
+    justify-content: center;
+    align-items: center;
+    padding-bottom:10px;
+}
+div{
+    padding-top: 10px;
+    flex-basis: 5px;
+}

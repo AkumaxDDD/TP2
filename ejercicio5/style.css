@@ -1,0 +1,27 @@
+body{
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+#formulario{
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 70px;
+    border: solid 1px white;
+}
+div{
+    flex-basis: 50px;
+}
+
+button{
+    margin: 10px;
+    
+}
+.titulo{
+    margin: 50px;
+    border: solid 3px white;
+    padding: 20px;
+}

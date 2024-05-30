@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
+    <title>Ejercicio 10</title>
+  </head>
+  <body>
+    <h1>Formulario de persona</h1>
+    <form id="formulario">
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input id="nombre" name="nombre" />
+      </div>
+      <div>
+        <label for="apellido">Apellido:</label>
+        <input id="apellido" name="apellido" required />
+      </div>
+      <div>
+        <label for="edad">Edad(años):</label>
+        <input id="edad" name="edad" type="number" min="0" />
+      </div>
+      <div>
+        <label for="estatura">Estatura(cm):</label>
+        <input id="estatura" name="estatura" type="text" />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input id="email" name="email" type="text" />
+      </div>
+      <div>
+        <p id="mensaje"></p>
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+  <script src="script.js"></script>
+</html>
