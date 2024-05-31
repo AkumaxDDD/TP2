@@ -1,2 +1,4 @@
 agrego un archivo mas para conflictos
 agregando algo en conflicto3 para crear conflicto 
+lo cambie en conflito5, hola
+algo mas en conflicto5
