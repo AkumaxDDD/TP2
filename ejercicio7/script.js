@@ -1,8 +1,10 @@
 const listado = $("listado");
 const mostrar = $("mostrar");
-const body = $("body")
+const body = $("body");
+let contenedor="";
+let names="";
 mostrar.addEventListener("click", async () => {
-    mostrar.remove()
+    mostrar.remove();
   let res = await fetch("https://jsonplaceholder.typicode.com/users");
   if (res.ok) {
     console.log("llegaron los datos!");
@@ -21,13 +23,24 @@ mostrar.addEventListener("click", async () => {
         if (res.ok) {
             console.log("llegaron mas datos!");
         const tareas = await res.json();
-        const contenedor = document.createElement("div")
+        
+        if(contenedor && names){
+          names.remove()
+          contenedor.remove()
+        }
+        names = document.createElement("h1") 
+        names.textContent=persona.name
+        contenedor = document.createElement("div")
+        body.appendChild(names)
         body.appendChild(contenedor);
         tareas.forEach((tarea) => {
+            
             const itemTarea =  document.createElement("div");
             if(persona.id === tarea.userId){
-                itemTarea.textContent = `${persona.name} - ${tarea.userId} - ${tarea.id} - ${tarea.title}`;
+                
+                itemTarea.textContent = ` ${tarea.userId} - ${tarea.id} - ${tarea.title}`;
                 contenedor.appendChild(itemTarea);
+                
             }
             
             if(tarea.completed === true){
@@ -36,10 +49,9 @@ mostrar.addEventListener("click", async () => {
                 itemTarea.style.backgroundColor="rgb(250, 60, 60)";
             }
             botonCerrar.addEventListener("click", () =>{
-                contenedor.remove()
+              names.remove()
+              contenedor.remove()
             })
-            
-        
         });
         }
         
