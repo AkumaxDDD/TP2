@@ -1,2 +1,3 @@
 agrego un archivo mas para conflictos
-comentando algo en master
+lo cambie en conflito5, hola
+algo mas en conflicto5
