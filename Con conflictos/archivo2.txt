@@ -1,3 +1,2 @@
 agrego un archivo mas para conflictos
-comentando algo en master
-ahora a fusionar
+agregando algo en conflicto3 para crear conflicto 
