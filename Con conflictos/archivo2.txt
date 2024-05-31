@@ -1,1 +1,2 @@
 agrego un archivo mas para conflictos
+comentando algo en master
